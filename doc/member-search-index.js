@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"<Unnamed>","c":"Sensor","l":"doMeasurement()"},{"p":"<Unnamed>","c":"Sensor","l":"getName()"},{"p":"<Unnamed>","c":"Sensor","l":"getUnit()"},{"p":"<Unnamed>","c":"Sensor","l":"getValue()"},{"p":"<Unnamed>","c":"Sensor","l":"Sensor()","u":"%3Cinit%3E()"}];updateSearchResults();
