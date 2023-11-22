@@ -2,6 +2,9 @@ package main.java.Temperatur;
 
 import main.java.Sensor;
 
+/**
+ * Abstrakte Klasse für Temperatursensoren, erweitert die abstrakte Klasse Sensor.
+ */
 public abstract class TemperaturSensor extends Sensor {
 
   private String unit;

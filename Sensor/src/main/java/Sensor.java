@@ -1,7 +1,6 @@
 package main.java;
 
-import main.java.Pressure.Barometric1000PressureSensorImpl;
-import main.java.Pressure.PressureSensor;
+import main.java.Writer.CsvWriter;
 
 public abstract class Sensor {
 
@@ -40,16 +39,8 @@ public abstract class Sensor {
   public abstract void doMeasurement();
 
   public static void main(String[] args) {
-    PressureSensor pressureSensor = new Barometric1000PressureSensorImpl(
-      "BarometerRaum1",
-      "hPa"
-    );
+    CsvWriter csvWriter = new CsvWriter();
 
-    pressureSensor.doMeasurement();
-
-    System.out.println("Sensor Name: " + pressureSensor.getName());
-    System.out.println(
-      "Messwert: " + pressureSensor.getValue() + " " + pressureSensor.getUnit()
-    );
+    csvWriter.run();
   }
 }
