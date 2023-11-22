@@ -5,9 +5,9 @@ import java.util.Random;
 /**
  * Kind-Klasse von PressureSensor für einen spezifischen Barometer-Drucksensor.
  */
-public class Barometric1000PressureSensorImpl extends PressureSensor {
+public class Aqualung2021ProDivePressureSensorImpl extends PressureSensor {
 
-  public Barometric1000PressureSensorImpl(String name, String unit) {
+  public Aqualung2021ProDivePressureSensorImpl(String name, String unit) {
     super(name, unit);
   }
 
@@ -16,7 +16,7 @@ public class Barometric1000PressureSensorImpl extends PressureSensor {
    */
   @Override
   public String getName() {
-    String name = "Barometric1000";
+    String name = "Aqualung2021Pro";
     return name;
   }
 
@@ -26,6 +26,6 @@ public class Barometric1000PressureSensorImpl extends PressureSensor {
   @Override
   public void doMeasurement() {
     Random random = new Random();
-    measurementValue = 0.5 + random.nextDouble() * 0.55;
+    measurementValue = random.nextDouble() * 10;
   }
 }
