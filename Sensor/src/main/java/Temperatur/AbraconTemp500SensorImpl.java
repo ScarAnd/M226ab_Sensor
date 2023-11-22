@@ -7,8 +7,11 @@ import main.java.RandomNumberGen;
  */
 public class AbraconTemp500SensorImpl extends TemperaturSensor {
 
+  private String name;
+
   public AbraconTemp500SensorImpl(String name, String unit) {
     super(name, unit);
+    this.name = name;
   }
 
   /**
@@ -16,7 +19,6 @@ public class AbraconTemp500SensorImpl extends TemperaturSensor {
    */
   @Override
   public String getName() {
-    String name = "AbraconTemp500";
     return name;
   }
 

@@ -5,7 +5,7 @@ import main.java.Pressure.PressureSensor;
 
 public abstract class Sensor {
 
-  private String name;
+  public String name;
 
   public Sensor(String name) {
     this.name = name;
@@ -41,7 +41,7 @@ public abstract class Sensor {
 
   public static void main(String[] args) {
     PressureSensor pressureSensor = new Barometric1000PressureSensorImpl(
-      "Barometer1",
+      "BarometerRaum1",
       "hPa"
     );
 

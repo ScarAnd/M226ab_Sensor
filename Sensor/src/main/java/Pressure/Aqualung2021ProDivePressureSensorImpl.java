@@ -7,8 +7,11 @@ import main.java.RandomNumberGen;
  */
 public class Aqualung2021ProDivePressureSensorImpl extends PressureSensor {
 
+  private String name;
+
   public Aqualung2021ProDivePressureSensorImpl(String name, String unit) {
     super(name, unit);
+    this.name = name;
   }
 
   /**
@@ -16,7 +19,6 @@ public class Aqualung2021ProDivePressureSensorImpl extends PressureSensor {
    */
   @Override
   public String getName() {
-    String name = "Aqualung2021Pro";
     return name;
   }
 

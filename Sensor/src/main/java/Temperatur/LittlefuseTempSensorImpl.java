@@ -7,8 +7,11 @@ import main.java.RandomNumberGen;
  */
 public class LittlefuseTempSensorImpl extends TemperaturSensor {
 
+  private String name;
+
   public LittlefuseTempSensorImpl(String name, String unit) {
     super(name, unit);
+    this.name = name;
   }
 
   /**
@@ -16,7 +19,6 @@ public class LittlefuseTempSensorImpl extends TemperaturSensor {
    */
   @Override
   public String getName() {
-    String name = "LittlefuseTemp";
     return name;
   }
 

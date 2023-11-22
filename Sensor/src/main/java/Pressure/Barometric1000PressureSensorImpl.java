@@ -7,16 +7,17 @@ import main.java.RandomNumberGen;
  */
 public class Barometric1000PressureSensorImpl extends PressureSensor {
 
+  private String name;
+
   public Barometric1000PressureSensorImpl(String name, String unit) {
     super(name, unit);
+    this.name = name;
   }
 
   /**
    * {@inheritDoc}
    */
-  @Override
   public String getName() {
-    String name = "Barometric1000";
     return name;
   }
 
