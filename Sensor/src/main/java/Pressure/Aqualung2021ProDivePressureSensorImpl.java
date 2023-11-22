@@ -1,6 +1,6 @@
 package main.java.Pressure;
 
-import java.util.Random;
+import main.java.RandomNumberGen;
 
 /**
  * Kind-Klasse von PressureSensor für einen spezifischen Barometer-Drucksensor.
@@ -25,7 +25,6 @@ public class Aqualung2021ProDivePressureSensorImpl extends PressureSensor {
    */
   @Override
   public void doMeasurement() {
-    Random random = new Random();
-    measurementValue = random.nextDouble() * 10;
+    measurementValue = RandomNumberGen.generateRandomNumber(0, 10);
   }
 }

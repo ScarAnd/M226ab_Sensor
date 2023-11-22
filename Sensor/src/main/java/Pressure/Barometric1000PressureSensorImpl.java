@@ -1,6 +1,6 @@
 package main.java.Pressure;
 
-import java.util.Random;
+import main.java.RandomNumberGen;
 
 /**
  * Kind-Klasse von PressureSensor für einen spezifischen Barometer-Drucksensor.
@@ -25,7 +25,6 @@ public class Barometric1000PressureSensorImpl extends PressureSensor {
    */
   @Override
   public void doMeasurement() {
-    Random random = new Random();
-    measurementValue = 0.5 + random.nextDouble() * 0.55;
+    measurementValue = RandomNumberGen.generateRandomNumber(0.5, 1.05);
   }
 }

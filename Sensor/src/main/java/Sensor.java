@@ -1,5 +1,8 @@
 package main.java;
 
+import main.java.Pressure.Barometric1000PressureSensorImpl;
+import main.java.Pressure.PressureSensor;
+
 public abstract class Sensor {
 
   private String name;
@@ -35,4 +38,18 @@ public abstract class Sensor {
    * einen HTTP-Request oder eine andere geeignete Methode.
    */
   public abstract void doMeasurement();
+
+  public static void main(String[] args) {
+    PressureSensor pressureSensor = new Barometric1000PressureSensorImpl(
+      "Barometer1",
+      "hPa"
+    );
+
+    pressureSensor.doMeasurement();
+
+    System.out.println("Sensor Name: " + pressureSensor.getName());
+    System.out.println(
+      "Messwert: " + pressureSensor.getValue() + " " + pressureSensor.getUnit()
+    );
+  }
 }
