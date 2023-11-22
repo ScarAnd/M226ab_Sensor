@@ -1,4 +1,12 @@
+package main.java;
+
 public abstract class Sensor {
+
+  private String name;
+
+  public Sensor(String name) {
+    this.name = name;
+  }
 
   /**
    * Gibt die Einheit der Messung zurück.
