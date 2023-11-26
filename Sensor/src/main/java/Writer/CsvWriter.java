@@ -30,11 +30,17 @@ public class CsvWriter {
   private long intervallInMs;
   private Sensor sensor;
 
+  /**
+   * Void in welchem der User Input abgefragt wird.
+   */
   public void run() {
     configureUserInput();
     start();
   }
 
+  /**
+   * User Abfrage nach Sensor usw.
+   */
   private void configureUserInput() {
     try (Scanner scanner = new Scanner(System.in)) {
       System.out.print(
@@ -101,6 +107,9 @@ public class CsvWriter {
     }
   }
 
+  /**
+   * Methode, um einen Sensor anzusprechen.
+   */
   private Sensor createSensor() {
     Sensor result = null;
     switch (sensorType) {
@@ -140,6 +149,9 @@ public class CsvWriter {
     return result;
   }
 
+  /**
+   * Void um die erhaltenen Daten des Sensors in ein csv zu schreiben.
+   */
   public void writeToCSV() {
     try (FileWriter writer = new FileWriter(csvFileName, true)) {
       sensor.doMeasurement();
@@ -169,6 +181,9 @@ public class CsvWriter {
     }
   }
 
+  /**
+   * Void, welcher den Sensor in einem bestimmten Intervall abfragt.
+   */
   public void start() {
     timer = new Timer();
     timer.scheduleAtFixedRate(
