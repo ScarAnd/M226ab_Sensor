@@ -1,0 +1,6 @@
+{
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "Sensor/lib/postgresql-42.2.27.jre7.jar"
+  ]
+}

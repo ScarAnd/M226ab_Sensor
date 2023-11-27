@@ -1,6 +1,8 @@
 package main.java;
 
+import java.sql.Connection;
 import main.java.Writer.CsvWriter;
+import main.java.Writer.postgresqlWriter;
 
 public abstract class Sensor {
 
@@ -33,14 +35,17 @@ public abstract class Sensor {
 
   /**
    * Führt die Messung durch.
-   * Diese Methode sollte den Sensor auslesen, z.B. durch Ansprechen einer seriellen Schnittstelle,
-   * einen HTTP-Request oder eine andere geeignete Methode.
+   * Diese Methode sollte den Sensor auslesen, z.B. durch Ansprechen einer seriellen Schnittstelle, einen HTTP-Request oder eine andere geeignete Methode.
    */
   public abstract void doMeasurement();
 
   public static void main(String[] args) {
     CsvWriter csvWriter = new CsvWriter();
 
-    csvWriter.run();
+    postgresqlWriter postgresqlWriter = new postgresqlWriter();
+
+    Connection connection = postgresqlWriter.connect();
+
+    csvWriter.run(connection);
   }
 }
